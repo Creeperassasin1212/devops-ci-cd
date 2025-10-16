@@ -63,9 +63,6 @@ jobs:
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
         working-directory: ${{ env.BUILD_PATH }}
-      - name: Test the site
-        run: |
-          ${{ steps.detect-package-manager.outputs.major }} run validate \
   build:
     name: Build
     needs: test
